@@ -3,7 +3,7 @@ Geometry functions for radar code.
 '''
 import numpy as np
 
-# beam height equation for ppi
+# beam height equation for ppi (every angle in degrees)
 def beam_height_ppi(ran, azi, elev, radz):
     erad = np.pi*elev/180.
 
@@ -15,5 +15,5 @@ def beam_height_ppi(ran, azi, elev, radz):
 
     xcor = scor*np.cos(np.pi*azi/180.)
     ycor = scor*np.sin(np.pi*azi/180.)
-    return xcor, ycor
+    return xcor, ycor, zcor
 
