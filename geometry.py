@@ -11,7 +11,7 @@ def beam_height_ppi(ran, azi, elev, radz):
     a = 6378137.
 
     zcor = np.sqrt(ran**2.+(ke*a)**2.+2.*ran*ke*a*np.sin(erad))-ke*a+radz
-    scor = ke*a*np.arcsin(ran*np.cos(erad)/(ke*a+zcor))/1000.
+    scor = ke*a*np.arcsin(ran*np.cos(erad)/(ke*a+zcor))
 
     xcor = scor*np.cos(np.pi*azi/180.)
     ycor = scor*np.sin(np.pi*azi/180.)

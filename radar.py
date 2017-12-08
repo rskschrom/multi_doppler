@@ -30,9 +30,9 @@ class Radar:
         self.ran_grid = ran_grid      
         self.azi_grid = azi_grid
         self.elev_grid = elevation     
-        self.x_grid = x_grid        
-        self.y_grid = y_grid        
-        self.z_grid = z_grid   
+        self.x_grid = x_grid+self.xpos      
+        self.y_grid = y_grid+self.ypos      
+        self.z_grid = z_grid+self.zpos 
         return       
 
     # calculate radial velocity field for wind field on radar grid
